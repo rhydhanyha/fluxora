@@ -1,0 +1,14 @@
+import java.util.Arrays;
+
+class Solution {
+    public boolean isAnagram(String s, String t) {
+        return s.length() == t.length() &&
+               Arrays.equals(s.chars().sorted().toArray(), t.chars().sorted().toArray());
+    }
+
+    public static void main(String[] args) {
+        Solution sol = new Solution();
+        System.out.println(sol.isAnagram("anagram", "nagaram")); 
+        System.out.println(sol.isAnagram("rat", "car"));         
+    }
+}
