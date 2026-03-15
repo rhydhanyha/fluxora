@@ -1,0 +1,12 @@
+import java.util.*;
+class Main{
+    public static void main(String[] args){
+        Scanner sc=new Scanner(System.in);
+        for(int t=sc.nextInt();t-->0;){
+            int n=sc.nextInt(),a[]=new int[n];
+            for(int i=0;i<n;i++) a[i]=sc.nextInt();
+            Arrays.sort(a,(x,y)->Integer.bitCount(x)%2==Integer.bitCount(y)%2?x-y:Integer.bitCount(x)%2-Integer.bitCount(y)%2);
+            for(int x:a) System.out.print(x+" "); System.out.println();
+        }
+    }
+}
